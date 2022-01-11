@@ -6,7 +6,13 @@
     <p>Elapsed Time: {{ elapsedTime }}</p>
     <p v-if="isWinning">You win</p>
     <div class="row">
-      <div class="column" v-for="(s, index) of shuffledPuzzleArray" :key="s" @click="swap(index)">
+      <div
+        class="column"
+        v-for="(s, index) of shuffledPuzzleArray"
+        :key="s"
+        @click="swap(index)"
+        @keyup.enter="swap(index)"
+      >
         <img :src="require(`../assets/${puzzleId}/${s}`)" alt="Puzzle Piece" />
       </div>
     </div>

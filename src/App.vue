@@ -7,15 +7,15 @@
 </template>
 
 <script>
-import PuzzleSelect from "./components/PuzzleSelect.vue";
-import RecordsList from "./components/RecordsList.vue";
-import SliderPuzzle from "./components/SliderPuzzle.vue";
+import PuzzleSelect from './components/PuzzleSelect.vue';
+import RecordsList from './components/RecordsList.vue';
+import SliderPuzzle from './components/SliderPuzzle.vue';
 
 export default {
   name: 'App',
   components: { PuzzleSelect, RecordsList, SliderPuzzle },
   data() {
-    return { selectedPuzzleId: "cut-pink" };
+    return { selectedPuzzleId: 'cut-pink' };
   },
 };
 </script>
