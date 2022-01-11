@@ -1,19 +1,21 @@
-<template></template>
+<template>
+  <div>
+    <PuzzleSelect @puzzle-changed="selectedPuzzleId = $event" />
+    <RecordsList />
+    <SliderPuzzle :puzzleId="selectedPuzzleId" />
+  </div>
+</template>
 
 <script>
+import PuzzleSelect from "./components/PuzzleSelect.vue";
+import RecordsList from "./components/RecordsList.vue";
+import SliderPuzzle from "./components/SliderPuzzle.vue";
+
 export default {
   name: 'App',
-  components: {},
+  components: { PuzzleSelect, RecordsList, SliderPuzzle },
+  data() {
+    return { selectedPuzzleId: "cut-pink" };
+  },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
