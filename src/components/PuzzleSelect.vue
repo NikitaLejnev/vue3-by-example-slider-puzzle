@@ -10,7 +10,7 @@
       </div>
       <div class="play-button">
         <button @click="selectPuzzle(p)">Play</button>
-      </div>"
+      </div>
     </div>
   </div>
 </template>
