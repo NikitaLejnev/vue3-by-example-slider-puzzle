@@ -6,7 +6,6 @@ let wrapper;
 
 describe('Tests with simple setup', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
     jest.spyOn(global, 'setInterval');
     jest.spyOn(global, 'clearInterval');
     wrapper = mount(SliderPuzzle);
